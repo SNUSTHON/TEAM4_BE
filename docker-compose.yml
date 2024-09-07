@@ -9,9 +9,9 @@ services:
       MYSQL_USER: 'COMPOSE_USER'
       MYSQL_PASSWORD: 'COMPOSE_PASSWORD'
     ports:
-      - '3306:3306'
+      - '3303:3306'
     expose:
-      - '3306'
+      - '3303'
     volumes:
       - my-yun-db:/var/lib/mysql
 
