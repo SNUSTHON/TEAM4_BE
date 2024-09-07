@@ -37,6 +37,6 @@ public class Video extends BaseEntity{
 
 	@ManyToOne
 	@JoinColumn(name="user_id")
-	User user;
+	private User user;
 
 }
