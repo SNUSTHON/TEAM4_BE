@@ -50,4 +50,12 @@ public class User extends BaseEntity{
 
 	@OneToMany(mappedBy = "user")
 	private List<Video> videos = new ArrayList<>();
+
+	public User(String name, String relation, LocalDate birth, LocalDate memorialDate, String profileImage) {
+		this.name = name;
+		this.relation = relation;
+		this.birth = birth;
+		this.memorialDate = memorialDate;
+		this.profileImage = profileImage;
+	}
 }
