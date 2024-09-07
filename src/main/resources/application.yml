@@ -1,7 +1,8 @@
 server:
   port: 8080
-  #  url : 10.50.33.214:8080
-  url: 10.50.34.123:8080
+  #  url : http://10.50.34.123:8080
+  url: http://10.50.34.123:8080
+  resource-path: "src/main/resources/static/uploads/"
 spring:
   datasource:
     # you must change url to docker database container name
@@ -9,7 +10,6 @@ spring:
     url: jdbc:mysql://localhost:3303/yun
     username: 'COMPOSE_USER'
     password: 'COMPOSE_PASSWORD'
-
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
