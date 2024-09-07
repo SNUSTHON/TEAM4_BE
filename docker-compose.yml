@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  yun-db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'yun'
+      MYSQL_ROOT_PASSWORD: 'COMPOSE_ROOT_PASSWORD'
+      MYSQL_USER: 'COMPOSE_USER'
+      MYSQL_PASSWORD: 'COMPOSE_PASSWORD'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-yun-db:/var/lib/mysql
+
+volumes:
+  my-yun-db:
+    driver: local
