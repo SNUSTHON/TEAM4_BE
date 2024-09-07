@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    # you must change url to docker database container name
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yun
+    username: 'COMPOSE_USER'
+    password: 'COMPOSE_PASSWORD'
+
+  jpa:
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: create # ????? none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
