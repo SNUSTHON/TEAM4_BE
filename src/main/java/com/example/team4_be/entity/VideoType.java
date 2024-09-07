@@ -4,12 +4,12 @@ import lombok.Getter;
 
 @Getter
 public enum VideoType {
-	BIRTHDAY("생일파티"),
-	SINGING("노래"),
-	WEDDING("결혼식"),
-	LAUGHING("웃음"),
-	WALKING("산책"),
-	EATING("음식");
+	BIRTHDAY("BIRTHDAY"),
+	SINGING("SINGING"),
+	WEDDING("WEDDING"),
+	LAUGHING("LAUGHING"),
+	WALKING("WALKING"),
+	EATING("EATING");
 	private final String name;
 
 	VideoType(String name) {
