@@ -38,7 +38,7 @@ public class UserService {
 
     private String saveProfileImage(MultipartFile profileImage) throws IOException {
         // 실제로 이미지 파일을 서버에 저장하는 로직
-        String folder = "team4_be/src/main/resources/static/uploaded_images/";
+        String folder = "/images";
         Path path = Paths.get(folder + profileImage.getOriginalFilename());
         Files.write(path, profileImage.getBytes());
         return path.toString();  // 이미지 파일의 경로를 반환
