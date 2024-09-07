@@ -2,6 +2,7 @@ package com.example.team4_be.Service;
 
 import com.example.team4_be.Dto.UserDto;
 import com.example.team4_be.Dto.response.ApiSuccessResponse;
+import com.example.team4_be.Dto.response.DeceasedResDto;
 import com.example.team4_be.Repository.UserImageRepository;
 import com.example.team4_be.Repository.UserRepository;
 import com.example.team4_be.entity.User;
@@ -34,6 +35,11 @@ public class UserService {
         userRepository.save(user);
         ApiSuccessResponse apiSuccessResponse = new ApiSuccessResponse("Missing person added successfully");
         return apiSuccessResponse;
+    }
+
+    public DeceasedResDto getUser() { //Todo : Change the return type to List<DeceasedResDto>
+        User user = userRepository.findById(1L).orElseThrow(() -> new IllegalArgumentException("User not found"));
+        return new DeceasedResDto(user);
     }
 
 }

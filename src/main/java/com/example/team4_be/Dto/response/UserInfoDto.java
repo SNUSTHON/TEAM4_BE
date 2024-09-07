@@ -2,6 +2,8 @@ package com.example.team4_be.Dto.response;
 
 import java.time.LocalDate;
 
+import com.example.team4_be.entity.User;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -17,4 +19,12 @@ public class UserInfoDto {
 	LocalDate birth;
 	@Schema(description = "유저 추모일", example = "2021-01-01")
 	LocalDate memorialDate;
+
+	public UserInfoDto(User user){
+		this.id = user.getId();
+		this.name = user.getName();
+		this.relation = user.getRelation();
+		this.birth = user.getBirth();
+		this.memorialDate = user.getMemorialDate();
+	}
 }

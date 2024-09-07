@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.example.team4_be.Dto.response.ApiSuccessResponse;
 import com.example.team4_be.Dto.response.VideoInfoDto;
 import com.example.team4_be.Dto.response.VideoResponseDto;
 import com.example.team4_be.config.ServerProperties;
@@ -19,7 +20,7 @@ public class VideoService {
 		VideoInfoDto videoInfoDto = VideoInfoDto.builder()
 				.id(1L)
 				.videoType(VideoType.BIRTHDAY)
-				.videoUrl(serverProperties.getVideo_url() + "/lee_mu_jin.mp4")
+				.videoUrl(serverProperties.getVideo_url() + "/birthday.mp4")
 				.build();
 
 		return VideoResponseDto.builder()
@@ -27,5 +28,9 @@ public class VideoService {
 				.status("success")
 				.totalVideos(1)
 				.build();
+	}
+
+	public ApiSuccessResponse addVideo() {
+		return new ApiSuccessResponse("Video creation started");
 	}
 }
