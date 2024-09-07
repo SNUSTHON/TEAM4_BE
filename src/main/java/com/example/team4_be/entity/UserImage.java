@@ -18,6 +18,7 @@ import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "user_image")
@@ -31,6 +32,7 @@ public class UserImage extends BaseEntity{
 	private Long id;
 
 	@Column(name = "image_url")
+	@Setter
 	private String imageUrl;
 
 	@OneToMany(mappedBy = "userImage")
