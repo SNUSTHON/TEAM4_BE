@@ -10,4 +10,5 @@ import lombok.Data;
 @ConfigurationProperties(prefix = "server")
 public class ServerProperties {
 	private String url;
+	private String resource_path;
 }
