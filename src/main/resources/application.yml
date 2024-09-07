@@ -1,8 +1,10 @@
 server:
   port: 8080
   #  url : http://10.50.34.123:8080
-  url: http://10.50.34.123:8080
+
+  url: http://10.50.33.214:8080
   resource-path: "src/main/resources/static/uploads/"
+  video-url: "http://10.50.33.214:8080/video/"
 spring:
   datasource:
     # you must change url to docker database container name

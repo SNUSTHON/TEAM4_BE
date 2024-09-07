@@ -11,4 +11,5 @@ import lombok.Data;
 public class ServerProperties {
 	private String url;
 	private String resource_path;
+	private String video_url;
 }
