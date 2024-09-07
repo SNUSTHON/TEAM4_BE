@@ -1,6 +1,7 @@
 server:
   port: 8080
-
+  #  url : 10.50.33.214:8080
+  url: 10.50.34.123:8080
 spring:
   datasource:
     # you must change url to docker database container name
@@ -20,3 +21,13 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
     generate-ddl: true
+springdoc:
+  packages-to-scan: com.example.team4_be
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path: /
+    disable-swagger-default-url: true
+    display-request-duration: true
+    operations-sorter: alpha
+
